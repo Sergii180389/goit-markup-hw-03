@@ -7,7 +7,6 @@
 /* колір mail and tel in footer rgba(255, 255, 255, 0.6) */
 /* колір WEB  в лого #000000 */
 
-/* ROOT */
 :root {
   --primary-font: 'Roboto', sans-serif;
   --secondary-font: 'Raleway';
@@ -56,6 +55,26 @@ ol {
   padding-left: 0;
 }
 
+
+/* скидання нижнього відступу в картинок */
+img {
+  display: block;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+/* Cкидування точок в списках ul*/
+.list {
+  list-style: none;
+}
+
+/* скидування нахилу в посилань */
+.link {
+  text-decoration: none;
+}
+
 /* приховування заловка в CSS */
 .invisible {
   position: absolute;
@@ -70,28 +89,43 @@ ol {
   margin: -1px;
 }
 
+/* ====================== COMPONENTS =======================*/
 
-/* скидання нижнього відступу в картинок */
-img {
-  display: block;
+.section-title {
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--title-text-color);
 }
 
 button {
-  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  text-align: center;
 }
 
-/* Cкидування точок в списках ul*/
-.list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-/* скидування нахилу в посилань */
-.link {
+.logo-span,
+ .logo-footer {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
   text-decoration: none;
+  font-family: var(--secondary-font);
 }
 
-/* ================HEADER SECTION============*/
+.logo-header,
+ .logo-span {
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  text-decoration: none;
+  font-family: var(--secondary-font);
+}
+
+/* ====================== /COMPONENTS =======================*/
+
+
+/* ================ HEADER SECTION ======================*/
 .page-header {
   display: flex;
   padding-top: 24px;
@@ -100,45 +134,58 @@ button {
   border-bottom: 1px solid #ececec;
 }
 
-.page-header .nav,
+.nav,
 .container-header,
-.page-header .site-nav.list,
-.page-header .auth-nav.list {
+.site-nav.list,
+.auth-nav.list 
+{
   display: flex;
   align-items: center;
 }
 
-.nav .site-nav.list {
+.site-nav.list {
   margin-left: 93px;
 }
 
-.site-nav.list .nav-menu:not(:last-child) {
+.nav-menu:not(:last-child) {
   margin-right: 50px;
 }
 
 .auth-nav.list {
   margin-left: auto;
 }
-.auth-nav.list .link-mail {
-  margin-right: 50px;
-}
-
-.logo-header {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  font-family: var(--secondary-font);
+ 
+.logo-header,
+.logo-footer {
   color: var(--logo-black);
 }
 
 .logo-span {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  font-family: var(--secondary-font);
   color: var(--accent-color);
+}
+
+
+.header-mail,
+.header-tel,
+.link-nav {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  color: var(--primary-text-color);
+}
+
+.link-nav {
+  color: var(--title-text-color);
+}
+
+.header-mail,
+.header-tel {
+  color: var(--primary-text-color);
+}
+
+.header-mail {
+  margin-right: 50px;
 }
 
 .logo-header:hover,
@@ -150,64 +197,29 @@ button {
   color: var(--accent-color);
 }
 
-/* site nav */
-.site-nav .link-nav {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--title-text-color);
-}
-
-.site-nav .link-nav:hover,
-.site-nav .link-nav:focus {
+.link-nav:hover,
+.link-nav:focus {
   color: var(--accent-color);
 }
 
-.site-nav .link-nav.current {
-  color: var(--accent-color);
-}
-/* посилання mail tel */
-.auth-nav .link-mail,
-.auth-nav .link-tel {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--primary-text-color);
-}
-
-.auth-nav .link-mail:hover,
-.auth-nav .link-mail:focus {
+.link-nav.current {
   color: var(--accent-color);
 }
 
-.auth-nav .link-tel:hover,
-.auth-nav .link-tel:focus {
+
+.header-mail:hover,
+.header-mail:focus {
   color: var(--accent-color);
 }
 
-/* SECTION title*/
-
-.section-title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: var(--title-text-color);
+.header-tel:hover,
+.header-tel:focus {
+  color: var(--accent-color);
 }
 
-p.text,
-p.work-text {
-  margin-top: 0;
-  margin-bottom: 0;
-}
+/* ================ /HEADER SECTION ============*/
 
-button {
-  border-radius: 4px;
-  border: 1px solid transparent;
-  text-align: center;
-}
-/* ===HERO SECTION===*/
+/* ========================= HERO SECTION ==================*/
 .hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -225,17 +237,15 @@ button {
   line-height: 1.37;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
   color: var(--primary-white-color);
 }
 
-.hero .button {
+.button {
   padding: 10px 32px;
   min-width: 216px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  display: inline-block;
   letter-spacing: 0.06em;
   text-decoration: none;
   color: var(--primary-white-color);
@@ -243,11 +253,13 @@ button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.hero .button:hover,
-.hero .button:focus {
+.button:hover,
+.button:focus {
   background-color: #188ce8;
 }
-/*===SECTION BENEFIST===*/
+
+
+/*================ SECTION BENEFIST =================*/
 
 .section.benefit {
   display: flex;
@@ -263,11 +275,11 @@ button {
   display: flex;
 }
 
-.section.benefit .about-benefit:not(:last-child) {
+.about-benefit:not(:last-child) {
   margin-right: 30px;
 }
 
-.section.benefit .benefit-title {
+.benefit-title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -277,19 +289,22 @@ button {
   color: var(--title-text-color);
 }
 
+/*================ /SECTION BENEFIST =================*/
 
-.example .section-title {
+
+/* =================== SECTION EXAMPLE =================*/
+
+.section-title.example {
   margin-top: 0;
   margin-bottom: 50px;
 }
 
-/* ===SECTION EXAMPLE ===*/
 .section.example {
   padding-top: 47px;
   padding-bottom: 94px;
 }
 
-.section.example .list.example {
+.list.example {
   display: flex;
 }
 
@@ -302,14 +317,16 @@ button {
   width: calc(100% - 60px) / 3;
 }
 
-/* ==========SECTION EMPLOYEES ======*/
+/* =================== /SECTION EXAMPLE =================*/
+
+
+/* ==================== SECTION EMPLOYEES ===========*/
 .section.employees {
   display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
   background-color: var(--secondary-section-button);
 }
-
 
 .list.employees {
   display: flex;
@@ -321,12 +338,12 @@ button {
   width: calc(100% - 90px) / 4;
 }
 
-.section.employees .section-title {
+.section-title.employees {
   margin-bottom: 50px;
   text-align: center;
 }
 
-.section.employees .employees-title {
+.employees-title {
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -350,55 +367,38 @@ button {
   border-radius: 0px 0px 4px 4px;
 }
 
-/* ========== /SECTION EMPLOYEES ============*/
+/* ================ /SECTION EMPLOYEES ==================*/
 
-/* /* ===============FOOTER SECTION*=============/ */
+/* /* ===================== FOOTER SECTION *===================/ */
 
 .footer {
-  background-color: var(--background-footer-section);
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
-}
-
-.container .footer {
-  display: flex;
-  
+  background-color: var(--background-footer-section);
 }
 
 .logo-footer {
-  
   margin-bottom: 20px;
-  width: 145px;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
   display: inline-block;
-  font-family: var(--secondary-font);
-  color: var(--logo-black);
 }
-
 
 
 .footer-addres:not(:last-child){
   margin-bottom: 9px;
 }
 
-.footer .logo-footer {
+.logo-footer {
   color: var(--primary-white-color);
 }
 
-.footer .logo-span {
+.logo-footer:hover,
+.logo-footer:focus {
   color: var(--accent-color);
 }
 
-.footer .logo-footer:hover,
-.footer .logo-footer:focus {
-  color: var(--accent-color);
-}
-
-.footer .logo-span:hover,
-.footer .logo-span:focus {
+.logo-span:hover,
+.logo-span:focus {
   color: var(--accent-color);
 }
 
@@ -429,25 +429,23 @@ button {
   color: var(--accent-color);
 }
 
-/* =========Стилі сторінки PORTFOLIO =========*/
+/* /* ===================== /FOOTER SECTION *===================/ */
 
-/* ========SECTION PROJECT =========*/
+
+/* ======================== PAGE PORTFOLIO ==========================*/
+
+/* ================ SECTION PROJECT ==================*/
 .section-project {
   display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
 }
 
-.section-title.project {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .list.pointer {
   display: flex;
+  margin-bottom: 50px;
   justify-content: center;
   min-width: 575px;
- margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -460,7 +458,6 @@ button {
   color: var(--title-text-color);
 }
 
-
 .work-text {
   font-size: 16px;
   line-height: 1.88;
@@ -471,6 +468,7 @@ button {
   display: flex;
   align-items: flex-start;
 }
+
 .button-link:not(:last-child) {
   margin-right: 8px;
 }
@@ -498,7 +496,6 @@ button {
 
 .btn-secondary {
   padding: 6px 22px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.63;
@@ -513,4 +510,4 @@ button {
   background-color: var(--accent-color);
 }
 
-/* ======== /SECTION PROJECT =========*/
+/* ================ /SECTION PROJECT ==================*/
