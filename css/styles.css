@@ -91,17 +91,21 @@ button {
   text-decoration: none;
 }
 
-/* HEADER SECTION*/
+/* ================HEADER SECTION============*/
 .page-header {
   display: flex;
+  padding-top: 24px;
+  padding-bottom: 24px;
   align-items: center;
   border-bottom: 1px solid #ececec;
 }
 
 .page-header .nav,
+.container-header,
 .page-header .site-nav.list,
 .page-header .auth-nav.list {
   display: flex;
+  align-items: center;
 }
 
 .nav .site-nav.list {
@@ -119,16 +123,7 @@ button {
   margin-right: 50px;
 }
 
-.site-nav.list,
-.auth-nav.list {
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
 .logo-header {
-  padding-top: 24px;
-  padding-bottom: 25px;
-  width: 145px;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -194,11 +189,6 @@ button {
 
 /* SECTION title*/
 
-.section.example {
-  padding-top: 47px;
-  padding-bottom: 47px;
-}
-
 .section-title {
   font-size: 36px;
   line-height: 1.17;
@@ -212,11 +202,6 @@ p.work-text {
   margin-bottom: 0;
 }
 
-.list.work .title-work {
-  margin: 0;
-  margin-bottom: 0;
-}
-
 button {
   border-radius: 4px;
   border: 1px solid transparent;
@@ -224,7 +209,8 @@ button {
 }
 /* ===HERO SECTION===*/
 .hero {
-  padding: 200px 452px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
   background-color: var(--background-footer-section);
   /* outline: 1px solid red; */
@@ -281,8 +267,7 @@ button {
   margin-right: 30px;
 }
 
-.section.benefit .benefit-title,
-.section.employees .employees-title {
+.section.benefit .benefit-title {
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -292,12 +277,17 @@ button {
   color: var(--title-text-color);
 }
 
+
 .example .section-title {
   margin-top: 0;
   margin-bottom: 50px;
 }
 
 /* ===SECTION EXAMPLE ===*/
+.section.example {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
 
 .section.example .list.example {
   display: flex;
@@ -315,14 +305,14 @@ button {
 /* ==========SECTION EMPLOYEES ======*/
 .section.employees {
   display: flex;
-  padding-top: 47px;
-  padding-bottom: 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--secondary-section-button);
 }
 
+
 .list.employees {
   display: flex;
-  margin-bottom: 94px;
   flex-wrap: wrap;
   gap: 30px;
 }
@@ -332,12 +322,12 @@ button {
 }
 
 .section.employees .section-title {
-  margin-top: 94px;
   margin-bottom: 50px;
   text-align: center;
 }
 
 .section.employees .employees-title {
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -354,6 +344,7 @@ button {
 .name-employees {
   padding-top: 30px;
   padding-bottom: 30px;
+  background-color: var(--primary-white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -365,14 +356,17 @@ button {
 
 .footer {
   background-color: var(--background-footer-section);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
-.container-footer {
+.container .footer {
   display: flex;
+  
 }
 
 .logo-footer {
-  padding-top: 60px;
+  
   margin-bottom: 20px;
   width: 145px;
   font-weight: 700;
@@ -384,8 +378,10 @@ button {
   color: var(--logo-black);
 }
 
-.list.address {
-  padding-bottom: 60px;
+
+
+.footer-addres:not(:last-child){
+  margin-bottom: 9px;
 }
 
 .footer .logo-footer {
@@ -450,19 +446,20 @@ button {
 .list.pointer {
   display: flex;
   justify-content: center;
-  margin-bottom: 34px;
   min-width: 575px;
-  min-height: 54px;
+ margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .title-work {
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--title-text-color);
 }
+
 
 .work-text {
   font-size: 16px;
