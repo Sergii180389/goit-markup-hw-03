@@ -29,7 +29,6 @@
   /* outline: 2px solid tomato; */
 }
 
-
 body {
   font-size: 14px;
   line-height: 1.7;
@@ -54,7 +53,6 @@ ol {
   margin-bottom: 0;
   padding-left: 0;
 }
-
 
 /* скидання нижнього відступу в картинок */
 img {
@@ -104,17 +102,9 @@ button {
   text-align: center;
 }
 
-.logo-span,
- .logo-footer {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  text-decoration: none;
-  font-family: var(--secondary-font);
-}
-
 .logo-header,
- .logo-span {
+.logo-footer,
+.logo-span {
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
@@ -122,8 +112,15 @@ button {
   font-family: var(--secondary-font);
 }
 
+.header-mail,
+.header-tel,
+.link-nav {
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
 /* ====================== /COMPONENTS =======================*/
-
 
 /* ================ HEADER SECTION ======================*/
 .page-header {
@@ -137,8 +134,7 @@ button {
 .nav,
 .container-header,
 .site-nav.list,
-.auth-nav.list 
-{
+.auth-nav.list {
   display: flex;
   align-items: center;
 }
@@ -154,9 +150,12 @@ button {
 .auth-nav.list {
   margin-left: auto;
 }
- 
-.logo-header,
-.logo-footer {
+
+.header-mail {
+  margin-right: 50px;
+}
+
+.logo-header {
   color: var(--logo-black);
 }
 
@@ -164,36 +163,13 @@ button {
   color: var(--accent-color);
 }
 
-
-.header-mail,
-.header-tel,
-.link-nav {
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  color: var(--primary-text-color);
-}
-
-.link-nav {
-  color: var(--title-text-color);
-}
-
 .header-mail,
 .header-tel {
   color: var(--primary-text-color);
 }
 
-.header-mail {
-  margin-right: 50px;
-}
-
-.logo-header:hover,
-.logo-header:focus {
-  color: var(--accent-color);
-}
-.logo-span:hover,
-.logo-span:focus {
+.nav > a:hover,
+.nav > a:focus {
   color: var(--accent-color);
 }
 
@@ -202,11 +178,6 @@ button {
   color: var(--accent-color);
 }
 
-.link-nav.current {
-  color: var(--accent-color);
-}
-
-
 .header-mail:hover,
 .header-mail:focus {
   color: var(--accent-color);
@@ -214,6 +185,14 @@ button {
 
 .header-tel:hover,
 .header-tel:focus {
+  color: var(--accent-color);
+}
+
+.link-nav {
+  color: var(--title-text-color);
+}
+
+.link-nav.current {
   color: var(--accent-color);
 }
 
@@ -258,7 +237,6 @@ button {
   background-color: #188ce8;
 }
 
-
 /*================ SECTION BENEFIST =================*/
 
 .section.benefit {
@@ -291,7 +269,6 @@ button {
 
 /*================ /SECTION BENEFIST =================*/
 
-
 /* =================== SECTION EXAMPLE =================*/
 
 .section-title.example {
@@ -318,7 +295,6 @@ button {
 }
 
 /* =================== /SECTION EXAMPLE =================*/
-
 
 /* ==================== SECTION EMPLOYEES ===========*/
 .section.employees {
@@ -383,23 +359,12 @@ button {
   display: inline-block;
 }
 
-
-.footer-addres:not(:last-child){
+.footer-addres:not(:last-child) {
   margin-bottom: 9px;
 }
 
 .logo-footer {
   color: var(--primary-white-color);
-}
-
-.logo-footer:hover,
-.logo-footer:focus {
-  color: var(--accent-color);
-}
-
-.logo-span:hover,
-.logo-span:focus {
-  color: var(--accent-color);
 }
 
 .link-address {
@@ -408,15 +373,15 @@ button {
   color: var(--primary-white-color);
 }
 
-.link-address:hover,
-.link-address:focus {
-  color: var(--accent-color);
-}
-
 .link-mail,
 .link-tel {
   font-style: normal;
   color: var(--footer-mail-tel);
+}
+
+.link-address:hover,
+.link-address:focus {
+  color: var(--accent-color);
 }
 
 .link-mail:hover,
@@ -428,9 +393,7 @@ button {
 .link-tel:focus {
   color: var(--accent-color);
 }
-
 /* /* ===================== /FOOTER SECTION *===================/ */
-
 
 /* ======================== PAGE PORTFOLIO ==========================*/
 
